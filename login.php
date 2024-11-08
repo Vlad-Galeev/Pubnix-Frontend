@@ -12,5 +12,5 @@ $scopes = [
 $callback_url = "https://pubnix.sinij.ca/callback.php";
 
 // INITIALIZATION
-$microsoft = new Auth($tenant, $CLIENT_ID,  $CLIENT_SECRET, $callback_url, $scopes);
+$microsoft = new Auth($tenant, $CLIENT_ID,  $CLIENT_SECRET, $REDIRECT_URI, $scopes);
 header("location: ". $microsoft->getAuthUrl()); //Redirecting to get access token

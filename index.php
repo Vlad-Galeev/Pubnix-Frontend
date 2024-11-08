@@ -1,5 +1,4 @@
 <?php
-phpinfo();
 // check cookies
 if (!isset($_COOKIE['username'])) {
     // if not logged in

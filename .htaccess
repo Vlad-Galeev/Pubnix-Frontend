@@ -1,2 +1,2 @@
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+DefaultType application/x-httpd-php
+DirectoryIndex index.php index.html

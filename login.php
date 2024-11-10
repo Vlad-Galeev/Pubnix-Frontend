@@ -9,8 +9,7 @@ $tenant = "common";
 $scopes = [
 "User.Read",
 ];
-$callback_url = "https://pubnix.sinij.ca/msCallback.php";
 
 // INITIALIZATION
-$microsoft = new Auth($tenant, $CLIENT_ID,  $callback_url, $REDIRECT_URI, $scopes);
+$microsoft = new Auth($tenant, $CLIENT_ID,  $REDIRECT_URI, $REDIRECT_URI, $scopes);
 header("location: ". $microsoft->getAuthUrl()); //Redirecting to get access token

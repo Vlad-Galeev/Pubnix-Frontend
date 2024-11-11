@@ -20,7 +20,8 @@ class BetterUser extends User
                 ->execute();
             var_dump($user);
         } catch (ClientException $e) {
-            throw new \Exception("Cannot connect make sure you have asked User.Read permission from the authenticated user.", 1);
+//            throw new \Exception("Cannot connect make sure you have asked User.Read permission from the authenticated user.", 1);
+            echo "ERR";
             return false;
         }
         $this->data = $user;

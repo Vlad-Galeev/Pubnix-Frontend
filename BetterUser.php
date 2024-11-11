@@ -17,7 +17,6 @@ class BetterUser extends User
         $url =  "/me/memberOf";
         try {
             $user = $this->graph()->createRequest("get",$url)
-                ->setReturnType(MicrosoftUser::class)
                 ->execute();
         } catch (ClientException $e) {
             throw new \Exception("Cannot connect make sure you have asked User.Read permission from the authenticated user.", 1);

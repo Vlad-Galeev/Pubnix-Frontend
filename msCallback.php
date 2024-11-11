@@ -16,13 +16,9 @@ $microsoft->setAccessToken($tokens->access_token);
 
 $user = (new User); // User get pulled only if access token was generated for scope User.Read
 
-echo "<br>";
 echo $user->data->getGivenName();
-echo "<br>";
-echo $user->data["_propDict"];
-echo "<br>";
-echo $user->data->getOnPremisesImmutableId();
-echo "<br>-------";
+
+echo "<br>-------<br>";
 $betterUser = (new BetterUser);
 echo $betterUser->data;
 // https://graph.microsoft.com/v1.0/me/memberOf

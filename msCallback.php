@@ -27,8 +27,10 @@ $tokens = $microsoft->getToken($_REQUEST['code'], Session::get("state"));
 $microsoft->setAccessToken($tokens->access_token);
 
 $user = (new User); // User get pulled only if access token was generated for scope User.Read
+echo "<br>";
 echo $user->data->getGivenName();
+echo "<br>";
 echo $user->data->getOnPremisesImmutableId();
-echo "-------";
+echo "<br>-------";
 dd($user->data);
 // header("location: user.php");

@@ -32,5 +32,5 @@ echo $user->data->getGivenName();
 echo "<br>";
 echo $user->data->getOnPremisesImmutableId();
 echo "<br>-------";
-dd($user->data);
+var_dump($user->data);
 // header("location: user.php");

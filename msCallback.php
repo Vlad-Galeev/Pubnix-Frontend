@@ -21,7 +21,7 @@ $ids = array_column($groups, 'id');
 //echo "<br>-------<br>";
 //var_dump($groups);
 //echo "<br>------<br>";
-var_dump($ids);
+//var_dump($ids);
 //echo "<br>------<br>";
 //if (in_array("cccc4f7e-ea3a-426b-a5e3-ba694b84a614", $ids)){
 //    echo "BEng!!!";

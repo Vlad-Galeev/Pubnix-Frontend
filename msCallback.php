@@ -20,6 +20,7 @@ $groups = $user->graph()->createRequest("get", "/me/memberOf")->execute()->getBo
 $ids = array_column($groups, 'id');
 echo "<br>-------<br>";
 var_dump($groups);
+echo "<br>------<br>";
 var_dump($ids);
 echo "<br>H";
 // header("location: user.php");

@@ -16,10 +16,8 @@ $microsoft->setAccessToken($tokens->access_token);
 $user = (new User); // User get pulled only if access token was generated for scope User.Read
 
 echo $user->data->getGivenName();
-$groups = $user->data->getGroups();
-$groups2 = $user->graph()->createRequest("get", "/me/memberOf")->execute()->getBody()["value"];
+$groups = $user->graph()->createRequest("get", "/me/memberOf")->execute()->getBody()["value"];
 echo "<br>-------<br>";
 var_dump($groups);
-var_dump($groups2);
 echo "<br>H";
 // header("location: user.php");

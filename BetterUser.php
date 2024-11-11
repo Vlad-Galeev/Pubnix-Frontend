@@ -9,6 +9,8 @@ class BetterUser extends BaseModel
     public $data;
     function __construct()
     {
+        echo "HI";
+        echo $this->checkAuthentication();
         $this->checkAuthentication();
 //        $this->fetch_data();
         $this->test();

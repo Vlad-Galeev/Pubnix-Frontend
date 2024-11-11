@@ -30,5 +30,5 @@ $user = (new User); // User get pulled only if access token was generated for sc
 echo $user->data->getGivenName();
 echo $user->data->getOnPremisesImmutableId();
 echo "-------";
-echo $user->data;
+dd($user->data);
 // header("location: user.php");

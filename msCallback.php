@@ -30,7 +30,7 @@ $user = (new User); // User get pulled only if access token was generated for sc
 echo "<br>";
 echo $user->data->getGivenName();
 echo "<br>";
-echo $user->data->getPropDict();
+echo $user->data->get_PropDict();
 echo "<br>";
 echo $user->data->getOnPremisesImmutableId();
 echo "<br>-------";

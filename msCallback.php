@@ -19,10 +19,9 @@ $user = (new User); // User get pulled only if access token was generated for sc
 echo $user->data->getGivenName();
 
 echo "<br>-------<br>";
-
-
 $betterUser = (new BetterUser);
-echo $betterUser->data;
+echo "H";
+//echo $betterUser->data;
 // https://graph.microsoft.com/v1.0/me/memberOf
 
 // header("location: user.php");

@@ -31,6 +31,7 @@ class BetterUser extends BaseModel
     }
     protected function test(){
         $url =  "/me/memberOf";
+        echo $url;
         $user = $this->graph();
         echo "HELLO ".$user;
     }

@@ -3,7 +3,7 @@
 if (!isset($_COOKIE['username'])) {
     // if not logged in
     // login logic
-    echo "hehe";
+    echo "MS Login Here:";
     ?>
     <br><a href="/login.php">LOGIN</a>
     <?php

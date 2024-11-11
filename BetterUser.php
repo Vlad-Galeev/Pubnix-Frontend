@@ -16,8 +16,7 @@ class BetterUser extends BaseModel
     {
         $url =  "/me/memberOf";
         try {
-            $user = $this->graph()->createRequest("get",$url)
-                ->setReturnType(MicrosoftUser::class)
+            $user = $this->graph()->createRequest("get", $url)
                 ->execute();
             var_dump($user);
             echo "NO ERR";

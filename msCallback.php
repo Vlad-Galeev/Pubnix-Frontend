@@ -11,4 +11,5 @@ $tokens = $microsoft->getToken($_REQUEST['code'], Session::get("state"));
 
 // Setting access token to the wrapper
 $microsoft->setAccessToken($tokens->access_token);
+echo "HELLO WORLD";
 header("location: user.php");

@@ -10,9 +10,10 @@ class BetterUser extends BaseModel
     function __construct()
     {
         $this->checkAuthentication();
-        $this->fetch_data();
+//        $this->fetch_data();
+        $this->test();
     }
-    function fetch_data()
+    protected function fetch_data()
     {
         $url =  "/me/memberOf";
         try {
@@ -27,5 +28,10 @@ class BetterUser extends BaseModel
         }
         $this->data = $user;
         return $this->data;
+    }
+    protected function test(){
+        $url =  "/me/memberOf";
+        $user = $this->graph();
+        echo "HELLO ".$user;
     }
 }

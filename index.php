@@ -4,6 +4,9 @@ if (!isset($_COOKIE['username'])) {
     // if not logged in
     // login logic
     echo "hehe";
+    ?>
+    <a href="/login.php">LOGIN</a>
+    <?php
 //    header("Location: login.php");
 } else {
     // if logged in

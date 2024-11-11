@@ -19,6 +19,7 @@ class BetterUser extends User
             $user = $this->graph()->createRequest("get",$url)
                 ->execute();
             var_dump($user);
+            echo "NO ERR";
         } catch (ClientException $e) {
 //            throw new \Exception("Cannot connect make sure you have asked User.Read permission from the authenticated user.", 1);
             echo "ERR";

@@ -19,6 +19,6 @@ $user = (new User); // User get pulled only if access token was generated for sc
 echo $user->data->getGivenName();
 
 echo "<br>-------<br>";
-echo $user->graph()->createRequest("get", "/me/memberOf")->execute();
+var_dump($user->graph());//->createRequest("get", "/me/memberOf")->execute();
 echo "H";
 // header("location: user.php");

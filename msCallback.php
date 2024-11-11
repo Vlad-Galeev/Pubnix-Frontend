@@ -6,6 +6,8 @@ require "vendor/autoload.php";
 use myPHPnotes\Microsoft\Auth;
 use myPHPnotes\Microsoft\Handlers\Session;
 use myPHPnotes\Microsoft\Models\User;
+use myPHPnotes\Microsoft\Models\BetterUser;
+
 echo "TENNANT_ID ";
 echo Session::get("tenant_id");
 echo "<br>CLI_ID ";
@@ -27,6 +29,7 @@ $tokens = $microsoft->getToken($_REQUEST['code'], Session::get("state"));
 $microsoft->setAccessToken($tokens->access_token);
 
 $user = (new User); // User get pulled only if access token was generated for scope User.Read
+$betterUser = (new BetterUser);
 echo "<br>";
 echo $user->data->getGivenName();
 echo "<br>";
@@ -34,5 +37,7 @@ echo $user->data["_propDict"];
 echo "<br>";
 echo $user->data->getOnPremisesImmutableId();
 echo "<br>-------";
-var_dump($user->data);
+echo $betterUser->data;
+// https://graph.microsoft.com/v1.0/me/memberOf
+
 // header("location: user.php");

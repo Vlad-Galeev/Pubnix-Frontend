@@ -6,7 +6,7 @@ require "vendor/autoload.php";
 use myPHPnotes\Microsoft\Auth;
 use myPHPnotes\Microsoft\Handlers\Session;
 use myPHPnotes\Microsoft\Models\User;
-echo "TENNANT_ID "
+echo "TENNANT_ID ";
 echo Session::get("tenant_id");
 echo "<br>CLI_ID ";
 echo Session::get("client_id");

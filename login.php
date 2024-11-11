@@ -11,5 +11,5 @@ $scopes = [
 ];
 
 // INITIALIZATION
-$microsoft = new Auth($tenant, $CLIENT_ID,  $REDIRECT_URI, $REDIRECT_URI, $scopes);
+$microsoft = new Auth($tenant, $CLIENT_ID,  $CLIENT_SECRET, $REDIRECT_URI, $scopes);
 header("location: ". $microsoft->getAuthUrl()); //Redirecting to get access token

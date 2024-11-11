@@ -4,7 +4,7 @@ namespace myPHPnotes\Microsoft\Models;
 
 use GuzzleHttp\Exception\ClientException;
 use Microsoft\Graph\Model\User as MicrosoftUser;
-class BetterUser extends User
+class BetterUser extends BaseModel
 {
     public $data;
     function __construct()
@@ -17,6 +17,7 @@ class BetterUser extends User
         $url =  "/me/memberOf";
         try {
             $user = $this->graph()->createRequest("get",$url)
+                ->setReturnType(MicrosoftUser::class)
                 ->execute();
             var_dump($user);
             echo "NO ERR";

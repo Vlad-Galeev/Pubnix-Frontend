@@ -16,8 +16,7 @@ if (is_null(Session::get("tenant_id"))) {
 } else {
     $microsoft = new Auth(Session::get("tenant_id"),Session::get("client_id"),  Session::get("client_secret"), Session::get("redirect_uri"), Session::get("scopes"));
     $user = (new User); // User get pulled only if access token was generated for scope User.Read
-    echo "Logged IN";
-    echo $user->data;
+    var_dump($user->data);
     $groups = $user->graph()->createRequest("get", "/me/memberOf")->execute()->getBody()["value"];
     $ids = array_column($groups, 'id');
     ?>

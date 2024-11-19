@@ -6,9 +6,9 @@ use myPHPnotes\Microsoft\Auth;
 use myPHPnotes\Microsoft\Handlers\Session;
 use myPHPnotes\Microsoft\Models\User;
 // check cookies
-echo Session::get("tenant_id");
+echo Session::get("token");
 
-if (is_null(Session::get("tenant_id"))) {
+if (is_null(Session::get("token"))) {
     // if not logged in
     // login logic
     echo "MS Login Here:";

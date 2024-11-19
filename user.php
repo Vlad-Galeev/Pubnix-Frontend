@@ -16,13 +16,14 @@ if (is_null(Session::get("tenant_id"))) {
 } else {
     $microsoft = new Auth(Session::get("tenant_id"),Session::get("client_id"),  Session::get("client_secret"), Session::get("redirect_uri"), Session::get("scopes"));
     $user = (new User); // User get pulled only if access token was generated for scope User.Read
+    echo "Logged IN";
     echo $user->data;
     $groups = $user->graph()->createRequest("get", "/me/memberOf")->execute()->getBody()["value"];
     $ids = array_column($groups, 'id');
     ?>
     <hr>
     <p>Username is <code><?php echo $user->data->getGivenName(); ?></code></p>
-    <p id="conn_string">Connection command: <code>ssh <?php echo $_COOKIE['username']; ?>@pubnix.engsoc.net</code> <button onclick="myFunction()">Copy</button></p>
+    <p id="conn_string">Connection command: <code>ssh <?php echo $user->data->getGivenName(); ?>@pubnix.engsoc.net</code> <button onclick="myFunction()">Copy</button></p>
     <button>Reset Password</button>
     <?php
     // account doesnt exist

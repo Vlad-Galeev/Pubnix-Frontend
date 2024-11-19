@@ -5,11 +5,8 @@ require "vendor/autoload.php";
 use myPHPnotes\Microsoft\Auth;
 use myPHPnotes\Microsoft\Handlers\Session;
 use myPHPnotes\Microsoft\Models\User;
-// check cookies
-var_dump(Session::get("tenant_id"),Session::get("client_id"),  Session::get("client_secret"), Session::get("redirect_uri"), Session::get("scopes"));
-echo "---";
-
-if (is_null(Session::get("state"))) {
+// Check Session
+if (is_null(Session::get("tenant_id"))) {
     // if not logged in
     // login logic
     echo "MS Login Here:";

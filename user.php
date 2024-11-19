@@ -7,6 +7,7 @@ use myPHPnotes\Microsoft\Handlers\Session;
 use myPHPnotes\Microsoft\Models\User;
 // check cookies
 echo Session::get("state");
+echo "---";
 
 if (is_null(Session::get("state"))) {
     // if not logged in

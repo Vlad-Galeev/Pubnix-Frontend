@@ -6,7 +6,7 @@ use myPHPnotes\Microsoft\Auth;
 use myPHPnotes\Microsoft\Handlers\Session;
 use myPHPnotes\Microsoft\Models\User;
 // check cookies
-echo Session::get("state");
+var_dump(Session::get("state"));
 echo "---";
 
 if (is_null(Session::get("state"))) {

@@ -7,11 +7,6 @@ use myPHPnotes\Microsoft\Handlers\Session;
 use myPHPnotes\Microsoft\Models\User;
 
 $microsoft = new Auth(Session::get("tenant_id"),Session::get("client_id"),  Session::get("client_secret"), Session::get("redirect_uri"), Session::get("scopes"));
-$tokens = $microsoft->getToken($_REQUEST['code'], Session::get("state"));
-
-// Setting access token to the wrapper
-$microsoft->setAccessToken($tokens->access_token);
-
 $user = (new User); // User get pulled only if access token was generated for scope User.Read
 
 echo $user->data->getGivenName();

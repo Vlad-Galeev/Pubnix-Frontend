@@ -21,8 +21,8 @@ if (is_null(Session::get("tenant_id"))) {
     $ids = array_column($groups, 'id');
     ?>
     <hr>
-    <p>Username is <code><?php echo $user->data->getGivenName(); ?></code></p>
-    <p id="conn_string">Connection command: <code>ssh <?php echo $user->data->getGivenName(); ?>@pubnix.engsoc.net</code> <button onclick="myFunction()">Copy</button></p>
+    <p>Username is <code><?php echo $user->data->getMail(); ?></code></p>
+    <p id="conn_string">Connection command: <code>ssh <?php echo $user->data->getMail(); ?>@pubnix.engsoc.net</code> <button onclick="myFunction()">Copy</button></p>
     <button>Reset Password</button>
     <?php
     // account doesnt exist
